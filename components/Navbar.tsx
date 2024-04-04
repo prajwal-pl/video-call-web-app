@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import MobileNav from "./MobileNav";
 
 const Navbar = () => {
   return (
@@ -13,8 +14,14 @@ const Navbar = () => {
           alt="Logo"
           className="max-sm:size-10"
         />
-        <p className="font-bold text-2xl text-white">TalkVision</p>
+        <p className="font-extrabold text-[26px] max-sm:hidden text-white">
+          TalkVision
+        </p>
       </Link>
+      <div className="flex-between gap-5">
+        {/* Clerk user management */}
+        <MobileNav />
+      </div>
     </nav>
   );
 };
